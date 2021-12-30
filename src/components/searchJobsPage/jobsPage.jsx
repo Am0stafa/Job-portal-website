@@ -6,35 +6,18 @@ import {
   Input,
 
 } from "reactstrap";
+import JobCardList from './jobCardList';
 const JobsPage = () => {
 //data from db
  // const [users, setUsers] = useState([]);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
 
-  
-  //get data from db
-  const byCategory = (user, category) => {
-    // if (category) {
-    //   return user.category === category;
-    // } else return user;
-  };
-  const bySearch = (user, search) => {
-    // if (search) {
-    //   return user.name.toLowerCase().includes(search.toLowerCase());
-    // } else return user;
-  };
-
-  const filteredList = (users, category, search) => {
-    // return users
-    //   .filter(user => byCategory(user, category))
-    //   .filter(user => bySearch(user, search));
-  };
-
   return (
+  <div>
     <div>
      <FormGroup>
-                <Input defaultValue="" placeholder="Search for job" type="text" />
+                <Input defaultValue="" placeholder="Search for job" type="text" onChange={e => setSearch(e.target.value)} />
     </FormGroup>
  
       <select onChange={e => setCategory(e.target.value)}>
@@ -50,6 +33,8 @@ const JobsPage = () => {
         <option value="9">9</option>
         <option value="10">10</option>{" "}
       </select>
+    </div>
+    <JobCardList/>  
     </div>
   );
 }
