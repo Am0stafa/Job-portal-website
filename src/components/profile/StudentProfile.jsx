@@ -9,17 +9,15 @@ InputGroup,
 InputGroupAddon,
 InputGroupText,
 Input,
-Label
+
 } from "reactstrap";
-import './table.css'
 import classnames from "classnames";
 
 function StudentProfile() {
 
 const [demoModal, setDemoModal] = React.useState(false);
 const [formModal, setFormModal] = React.useState(false);
-  const [emailFocus, setEmailFocus] = React.useState(false);
-  const [passwordFocus, setPasswordFocus] = React.useState(false);
+const [emailFocus, setEmailFocus] = React.useState(false);
 
     return (
         <div>

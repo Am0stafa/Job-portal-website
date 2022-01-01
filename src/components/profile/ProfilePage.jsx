@@ -1,4 +1,6 @@
 import React from 'react'
+import AdminProfile from './AdminProfile'
+import EmployerProfile from './EmployerProfile'
 import StudentProfile from './StudentProfile'
 
 function ProfilePageOwn() {
@@ -6,7 +8,7 @@ function ProfilePageOwn() {
 const [user , setuser] = React.useState('student')
     return (
         <div>
-            {user === 'student'? <StudentProfile/> :<div> no user</div>}
+            {user === 'student'? <AdminProfile/> :<div> no user</div>}
         </div>
     )
 }
