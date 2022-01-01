@@ -154,64 +154,15 @@ export default function ProfilePage() {
                   </UncontrolledTooltip>
                 </div>
               </Col>
-              <Col className="ml-auto mr-auto" lg="4" md="6">
+            l  <Col className="ml-auto mr-auto" lg="4" md="6">
                 <Card className="card-coin card-plain">
                   <CardHeader>
-                    <img
-                      alt="..."
-                      className="img-center img-fluid rounded-circle"
-                      src={require("assets/img/mike.jpg").default}
-                    />
+                  
                     <h4 className="title">Transactions</h4>
                   </CardHeader>
                   <CardBody>
-                    <Nav
-                      className="nav-tabs-primary justify-content-center"
-                      tabs
-                    >
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 1,
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(1);
-                          }}
-                          href="#pablo"
-                        >
-                          Wallet
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 2,
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(2);
-                          }}
-                          href="#pablo"
-                        >
-                          Send
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 3,
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(3);
-                          }}
-                          href="#pablo"
-                        >
-                          News
-                        </NavLink>
-                      </NavItem>
-                    </Nav>
+                   
+                    
                     <TabContent
                       className="tab-subcategories"
                       activeTab={"tab" + tabs}
@@ -274,7 +225,7 @@ export default function ProfilePage() {
                         >
                           <i className="tim-icons icon-send" />
                         </Button>
-                      </TabPane>
+                      </TabPane>    
                       <TabPane tabId="tab3">
                         <Table className="tablesorter" responsive>
                           <thead className="text-primary">

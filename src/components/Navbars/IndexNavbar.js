@@ -53,7 +53,7 @@ export default function IndexNavbar() {
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand to="/" tag={Link} id="navbar-brand">
+          <NavbarBrand to="/pro" tag={Link} id="navbar-brand">
             <span>"user name"• </span>
             "user type ,emp,student..."
           </NavbarBrand>
@@ -78,9 +78,7 @@ export default function IndexNavbar() {
           <div className="navbar-collapse-header">
             <Row>
               <Col className="collapse-brand" xs="6">
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  BLK•React
-                </a>
+            
               </Col>
               <Col className="collapse-close text-right" xs="6">
                 <button
@@ -93,14 +91,15 @@ export default function IndexNavbar() {
              
               </Col>
             </Row>
-            
           </div>
           <Nav navbar>
-          <Button className="btn-link" color="success">
-              Login/Signup
-          </Button>
+          
+
+          <NavbarBrand to="/auth" tag={Link} id="navbar-brand" color="success">
+            <span>Login/Signup </span>
+          </NavbarBrand>
        
-        <Button color="info">Search for Jobs</Button>
+        <Button color="success"  to="/jobs" tag={Link} >Search for Jobs</Button>
           
           </Nav>
         </Collapse>

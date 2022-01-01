@@ -7,7 +7,8 @@ import {
     CardHeader,   
     CardBody,
     TabContent,
-    TabPane
+    TabPane,
+    Button
     
   
   } from "reactstrap";
@@ -56,11 +57,13 @@ const JobBox = () => {
                 </p>
               </TabPane>
             </TabContent>
+            <Button color="info" disabled={true}>Info</Button>
           </CardBody>
+
         </Card>
       
       </div>
     )
-}
+}    //disabled={!this.state.value}
 
 export default JobBox

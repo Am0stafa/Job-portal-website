@@ -7,7 +7,7 @@ function SignUp() {
       <h2>Sign Up</h2>
       <form>
       <div class="user-box">
-          <input type="password" name="" required=""/>
+          <input type="text" name="" required=""/>
           <label>User type</label>
         </div>
         <div class="user-box">
