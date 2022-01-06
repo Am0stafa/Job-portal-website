@@ -1,10 +1,14 @@
 //first page hidder
-import React from "react";
+import React,{useContext} from "react";
+import {Context} from '../../Context'
 
 // reactstrap components
 import { Container } from "reactstrap";
 
 export default function PageHeader() {
+
+const value = useContext(Context)
+
   return (
     <div className="page-header header-filter">
       <div className="squares square1" />
@@ -16,9 +20,9 @@ export default function PageHeader() {
       <div className="squares square7" />
       <Container>
         <div className="content-center brand">
-          <h1 className="h1-seo">GIU careers</h1>
+          <h1 className="h1-seo">GIU Careers</h1>
           <h3 className="d-none d-sm-block">
-          typesetting, remaining essentially unchanged. It was popularised in the 
+            lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet
           </h3>
         </div>
       </Container>

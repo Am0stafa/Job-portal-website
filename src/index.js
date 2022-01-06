@@ -12,11 +12,11 @@ import Index from "views/Index.js";
 import JobsPage from "components/searchJobsPage/jobsPage";
 import LoginupPage from "components/signInUp/LoginupPage";
 import ProfilePageOwn from "components/profile/ProfilePage";
-
+import {ContextProvider} from './Context'
 
 ReactDOM.render(
-
   <BrowserRouter>
+<ContextProvider>
     <Switch>
       <Route path="/components" render={(props) => <Index {...props} />} />
 
@@ -37,6 +37,8 @@ ReactDOM.render(
       
       <Redirect from="/" to="/components" />
     </Switch>
-  </BrowserRouter>,
+</ContextProvider>  
+  </BrowserRouter>
+  ,
   document.getElementById("root")
 );
