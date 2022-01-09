@@ -17,6 +17,7 @@ import NucleoIcons from "views/IndexSections/NucleoIcons.js";
 import Signup from "views/IndexSections/Signup.js";
 import Examples from "views/IndexSections/Examples.js";
 import Download from "views/IndexSections/Download.js";
+import EmpTable from "./IndexSections/EmpTable";
 
 export default function Index() {
 
@@ -34,6 +35,7 @@ export default function Index() {
       <div className="wrapper">
         <PageHeader />
         <div className="main">
+          <EmpTable/>
           <Basics />
           <Navbars />
           <Tabs />

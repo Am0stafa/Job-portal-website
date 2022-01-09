@@ -473,5 +473,199 @@ exports.ViewMyStatus = async (req, res) => {
 }
 
 
+exports.ViewAdvisors = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .execute('ViewAdvisors')
+        
+        res.status(200).json({
+            status: 'success',
+             data:{ data}
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.CocViewStudents = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('ii_id', sql.Int, req.body.ii_id)
+                            .execute('CocViewStudents')
+        
+        res.status(200).json({
+            status: 'success',
+             data:{ data}
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.ViewProgressReports = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('advisor_id', sql.Int, req.body.advisor_id)
+                            .execute('ViewProgressReports')
+        
+        res.status(200).json({
+            status: 'success',
+             data:{ data}
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.AdminReviewEmp = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('admin_id', sql.Int, req.body.admin_id)
+                            .input('emp_id', sql.Int, req.body.emp_id)
+                            .input('profile_status', sql.Bit, req.body.profile_status)
+                            .input('reason', sql.VarChar(100), req.body.reason)
+                            .execute('AdminReviewEmp')
+        
+        res.status(200).json({
+            status: 'success',
+             result:'employer accpeted/reqected successfully'
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.EmpEditProfile = async (req, res) => {
+//in complete
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('id', sql.Int, req.body.id)
+                            .input('password', sql.VarChar(8), req.body.password)
+                            .input('address', sql.VarChar(10), req.body.address)
+                            .input('company_name', sql.VarChar(10), req.body.company_name)
+                            .input('company_name', sql.VarChar(10), req.body.company_name)
+                            .execute('EmpEditProfile')
+        
+        res.status(200).json({
+            status: 'success',
+             result:'profile updated successfully'
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.AddFacultyRepToll = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('job_id', sql.Int, req.body.job_id)
+                            .input('facultyRep_id', sql.Int, req.body.facultyRep_id)
+                            .input('reason', sql.VarChar(100), req.body.reason)
+                            .execute('AddFacultyRepToll')
+        
+        res.status(200).json({
+            status: 'success',
+             result:'faculty representative added successfully'
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.AdminReviewJob = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('admin_id', sql.Int, req.body.admin_id)
+                            .input('job_id', sql.Int, req.body.job_id)
+                            .input('visibility', sql.Bit, req.body.visibility)
+                            .execute('AdminReviewJob')
+        
+        res.status(200).json({
+            status: 'success',
+             result:'job visibility changed successfully'
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+
 
 

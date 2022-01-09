@@ -28,7 +28,6 @@ router
   .route('/AdminViewEmps')
   .get(Controller.AdminViewEmps)
 
-
 router
   .route('/AdminViewJobs')
   .get(Controller.AdminViewJobs)
@@ -72,6 +71,34 @@ router
 router
   .route('/ViewMyStatus')
   .get(Controller.ViewMyStatus)
+
+router
+  .route('/ViewAdvisors')
+  .get(Controller.ViewAdvisors)
+
+router
+  .route('/CocViewStudents')
+  .get(Controller.CocViewStudents)
+
+router
+  .route('/ViewProgressReports')
+  .get(Controller.ViewProgressReports)
+
+router
+  .route('/AdminReviewEmp')
+  .patch(Controller.AdminReviewEmp)
+
+router
+  .route('/EmpEditProfile')
+  .patch(Controller.EmpEditProfile)
+
+router
+  .route('/AddFacultyRepToll')
+  .patch(Controller.AddFacultyRepToll)
+
+router
+  .route('/AdminReviewJob')
+  .patch(Controller.AdminReviewJob)
 
 
 

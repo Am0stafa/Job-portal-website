@@ -8,7 +8,7 @@ function ProfilePageOwn() {
 const [user , setuser] = React.useState('student')
     return (
         <div>
-            {user === 'student'? <AdminProfile/> :<div> no user</div>}
+            {user === 'student'? <StudentProfile/> :<div> no user</div>}
         </div>
     )
 }

@@ -7,6 +7,7 @@ import {
 
 } from "reactstrap";
 import JobCardList from './jobCardList';
+import './SelectButton.css'
 const JobsPage = () => {
 //data from db
  // const [users, setUsers] = useState([]);
@@ -20,7 +21,7 @@ const JobsPage = () => {
                 <Input defaultValue="" placeholder="Search for job" type="text" onChange={e => setSearch(e.target.value)} />
     </FormGroup>
  
-      <select onChange={e => setCategory(e.target.value)}>
+      <select onChange={e => setCategory(e.target.value)} id="blue">
         <option value="">Choose Semester</option>
         <option value="1">1</option>
         <option value="2">2</option>
