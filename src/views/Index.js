@@ -36,6 +36,7 @@ export default function Index() {
         <PageHeader />
         <div className="main">
           <EmpTable/>
+          {/* <EmpTable/>
           <Basics />
           <Navbars />
           <Tabs />
@@ -46,9 +47,8 @@ export default function Index() {
           <NucleoIcons />
           <Signup />
           <Examples />
-          <Download />
+          <Download /> */}
         </div>
-        <Footer />
       </div>
     </>
   );

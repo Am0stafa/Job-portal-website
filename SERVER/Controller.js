@@ -443,7 +443,7 @@ exports.AddMobile = async (req, res) => {
 
 }
 
-
+//!
 exports.ViewMyStatus = async (req, res) => {
     try{
     
@@ -666,6 +666,166 @@ exports.AdminReviewJob = async (req, res) => {
 
 }
 
+exports.EmpUpdateApplicant = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('student_id', sql.Int, req.body.student_id)
+                            .input('job_id', sql.Int, req.body.job_id)
+                            .input('application_status', sql.VarChar(20), req.body.application_status)
+                            .execute('EmpUpdateApplicant')
+        
+        res.status(200).json({
+            status: 'success',
+             result:'status of an applicant has changed'
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.courseInformation = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('facRep_id', sql.Int, req.body.facRep_id)
+                            .input('job_id', sql.Int, req.body.job_id)
+                            .output('ii_status', sql.Bit)
+                            .execute('courseInformation')
+        
+        res.status(200).json({
+            status: 'success',
+            data: data.output
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.ApplyForJob = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('sid', sql.Int, req.body.sid)
+                            .input('job_id', sql.Int, req.body.job_id)
+                            .execute('ApplyForJob')
+        
+        res.status(200).json({
+            status: 'success',
+             data:{ data}
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.UserRegister = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('usertype', sql.VarChar(20), req.body.usertype)
+                            .input('email', sql.VarChar(50), req.body.email)
+                            .input('first_name', sql.VarChar(20), req.body.first_name)
+                            .input('middle_name', sql.VarChar(20), req.body.middle_name)
+                            .input('last_name', sql.VarChar(20), req.body.last_name)
+                            .input('GIU_id', sql.Int, req.body.GIU_id)
+                            .input('semester', sql.Int, req.body.semester)
+                            .input('faculty', sql.VarChar(20), req.body.faculty)
+                            .input('major', sql.VarChar(20), req.body.major)
+                            .input('gpa', sql.Decimal(4, 2), req.body.gpa)
+                            .input('adress', sql.VarChar(10), req.body.adress)
+                            .input('company_name', sql.VarChar(20), req.body.company_name)
+                            .input('company_phone', sql.VarChar(20), req.body.company_phone)
+                            .input('fax', sql.VarChar(50), req.body.fax)
+                            .input('company_website', sql.VarChar(50), req.body.company_website)
+                            .input('type_of_business', sql.VarChar(30), req.body.type_of_business)
+                            .input('establishment_year', sql.VarChar(255), req.body.establishment_year)
+                            .input('origin_country', sql.VarChar(20), req.body.origin_country)
+                            .input('industry', sql.VarChar(20), req.body.industry)
+                            .input('n_current_employees', sql.Int, req.body.n_current_employees)
+                            .input('products_services', sql.VarChar(30), req.body.products_services)
+                            .input('age', sql.Int, req.body.age)
+                            .output('password', sql.VarChar(8))
+                            .output('idUser', sql.Int)
+                            .execute('UserRegister')
+        
+        res.status(200).json({
+            status: 'success',
+            data: data.output
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
+exports.UserLogin = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('email', sql.VarChar(50), req.body.email)
+                            .input('password', sql.VarChar(20), req.body.password)
+                            .output('success', sql.Bit)
+                            .output('user_id', sql.Int)
+                            .execute('UserLogin')
+        
+        res.status(200).json({
+            status: 'success',
+            data: data.output
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
 
 
 

@@ -100,6 +100,18 @@ router
   .route('/AdminReviewJob')
   .patch(Controller.AdminReviewJob)
 
+router
+  .route('/EmpUpdateApplicant')
+  .patch(Controller.EmpUpdateApplicant)
+
+router
+  .route('/UserRegister')
+  .post(Controller.UserRegister)
+
+router
+  .route('/UserLogin')
+  .get(Controller.UserLogin)
+
 
 
 module.exports = router;
