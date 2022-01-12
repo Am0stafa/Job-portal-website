@@ -33,8 +33,8 @@ router
   .get(Controller.AdminViewJobs)
 
 router
-  .route('/AdminViewFRs')
-  .get(Controller.AdminViewFRs)
+  .route('/h')
+  .get(Controller.h)
 
 router
   .route('/AddContact')
@@ -127,6 +127,10 @@ router
 router
   .route('/UserLogin')
   .post(Controller.UserLogin)
+
+router
+  .route('/ApplyForJob')
+  .post(Controller.ApplyForJob)
 
 
 

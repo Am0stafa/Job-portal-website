@@ -499,6 +499,34 @@ exports.ViewMyStatus = async (req, res) => {
 
 }
 
+//!
+exports.ApplyForJob = async (req, res) => {
+    try{
+    
+        let pool = await sql.connect(config)
+        console.log('database connected')
+        let data =await pool
+                            .request()
+                            .input('sid', sql.Int, req.body.sid)
+                            .input('job_id', sql.Int, req.body.job_id)
+                            .execute('ApplyForJob')
+        
+        res.status(200).json({
+            status: 'success',
+             result: "Job Applied"
+        });
+        
+    }catch(err){
+    
+        res.status(404).json({
+            status:"faild",
+            message:err.message
+                                                                                            
+        })
+    }
+
+}
+
 
 exports.ViewAdvisors = async (req, res) => {
     try{

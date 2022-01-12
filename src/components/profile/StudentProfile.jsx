@@ -28,7 +28,7 @@ const api = axios.create({
 useEffect(() => {
 
   api.post('/ViewProfile',{
-    userId:1149
+    userId:1150
   
   }).then(res =>{
     setUser(res.data.data.data.recordset)
