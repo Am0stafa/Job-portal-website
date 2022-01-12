@@ -1,4 +1,6 @@
-import React from 'react'
+import React,{useContext,useEffect} from "react";
+import {Context} from '../../Context'
+import axios from "axios";
 import {
 Button,
 Modal,
@@ -14,11 +16,34 @@ Input,
 import classnames from "classnames";
 
 function StudentProfile() {
-
 const [demoModal, setDemoModal] = React.useState(false);
 const [formModal, setFormModal] = React.useState(false);
 const [emailFocus, setEmailFocus] = React.useState(false);
+const [user, setUser] = React.useState([{}]);
+const [phone, setPhone] = React.useState(0);
+const api = axios.create({
+  baseURL: "http://localhost:5000/api/"
+})
 
+useEffect(() => {
+
+  api.post('/ViewProfile',{
+    userId:1149
+  
+  }).then(res =>{
+    setUser(res.data.data.data.recordset)
+    }).catch((err)=> console.log(err))
+  
+ 
+
+
+
+},[])
+
+
+
+
+console.log(phone)
     return (
         <div>
             <Button color="primary" onClick={() => setDemoModal(true)}>
@@ -57,7 +82,8 @@ const [emailFocus, setEmailFocus] = React.useState(false);
         <tr>
             <th className="text-center">#</th>
             <th>User name</th>
-            <th>Email</th>
+            <th>Last name</th>
+            <th>email</th>
             <th className="text-center">Password</th>
             <th className="text-right">Edit/Add phone number/Delete</th>
             
@@ -65,10 +91,11 @@ const [emailFocus, setEmailFocus] = React.useState(false);
     </thead>
     <tbody>
         <tr>
-            <td className="text-center">1</td>
-            <td>name</td>
-            <td>email</td>
-            <td className="text-center">password</td>
+            <td className="text-center">{user[0].users_ID}</td>
+            <td>{user[0].firstName}</td>
+            <td>{user[0].lastName}</td>
+            <td>{user[0].email}</td>
+            <td className="text-center">{user[0].pass}</td>
            
             <td className="text-right">
                 <Button className="btn-icon" color="info" size="sm">
@@ -119,17 +146,18 @@ const [emailFocus, setEmailFocus] = React.useState(false);
                     </InputGroupAddon>
                     <Input
                       placeholder="Phone"
-                      type="email"
+                      type="number"
                       onFocus={(e) => setEmailFocus(true)}
-                      onBlur={(e) => setEmailFocus(false)}
+                      onBlur={(e) => setEmailFocus(false)}//!
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </InputGroup>
                 </FormGroup>
               
                 
                 <div className="text-center">
-                  <Button className="my-4" color="primary" type="button">
-                    Sign in
+                  <Button className="my-4" color="primary" type="button" >
+                    Add
                   </Button>
                 </div>
                 

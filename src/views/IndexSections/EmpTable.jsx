@@ -22,16 +22,19 @@ const [emp, setEmp] =useState([{}])
  const getAllEmps=() =>{
   api.get('/ShowEmployers').then(res =>{
     setEmp(res.data.data.data.recordset)
-      console.log( emp[0].Company_name)
     }).catch((err)=> console.log(err))
   
- 
  }
+ useEffect(()=>{
+  getAllEmps();
+ 
+ 
+ },[])
+
 
   
   return (
     <>
-    <button onClick={()=>{getAllEmps()}}>fetch </button>
       <div className="content">
         <Row>
          
@@ -55,20 +58,27 @@ const [emp, setEmp] =useState([{}])
                     </tr>
                   </thead>
                   <tbody>
-                  {/* {emp.map((e)=>{
+                  {emp.map(e=>(
                   
-                    <tr key={e.Employer_ID}>
-                      <td>{e.firstName}</td>
-                      <td>{e.lastName}</td>
-                      <td className="text-center">$36,738</td>
-                    </tr>
-                  
-                  
-                  })} */}
-                    <tr>
-                      <td>{emp[0].Company_name}</td>
+                   <tr>
+                      <td key={1}>{e.Employer_ID}</td>
+                      <td key={2}>{e.firstName}</td>
+                      <td key={3}>{e.lastName}</td>
+                      <td key={4}>{e.Company_name}</td>
+                      <td key={5}>{e.website}</td>
+                      <td key={6}>{e.type_of_business}</td>
+                      <td key={7}>{e.industry}</td>
+                      <td className="text-center" key={8}>{e.products_or_services}</td>
                     
                     </tr>
+                  
+                  
+                  ))}
+                  {
+                  
+                  }
+                  
+                   
                    
                   </tbody>
                 </Table>

@@ -14,11 +14,11 @@ router
   
 router
   .route('/JobSearch')
-  .get(Controller.JobSearch)
+  .post(Controller.JobSearch)
   
 router
   .route('/ViewProfile')
-  .get(Controller.ViewProfile)
+  .post(Controller.ViewProfile)
   
 router
   .route('/DeleteProfile')
@@ -79,6 +79,10 @@ router
 router
   .route('/CocViewStudents')
   .get(Controller.CocViewStudents)
+  
+router
+  .route('/getuserID')
+  .get(Controller.getuserID)
 
 router
   .route('/ViewProgressReports')
@@ -109,8 +113,20 @@ router
   .post(Controller.UserRegister)
 
 router
+  .route('/createStudent')
+  .post(Controller.createStudent)
+
+router
+  .route('/createEmployer')
+  .post(Controller.createEmployer)
+
+router
+  .route('/createAdmin')
+  .post(Controller.createAdmin)
+
+router
   .route('/UserLogin')
-  .get(Controller.UserLogin)
+  .post(Controller.UserLogin)
 
 
 

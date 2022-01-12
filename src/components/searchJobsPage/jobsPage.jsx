@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-
+import React,{useContext} from "react";
 import {
 
   FormGroup,
@@ -8,12 +7,13 @@ import {
 } from "reactstrap";
 import JobCardList from './jobCardList';
 import './SelectButton.css'
+import {Context} from './../../Context'
+
 const JobsPage = () => {
 //data from db
  // const [users, setUsers] = useState([]);
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
-
+ const [search ,setSearch,category,setCategory] = useContext(Context)
+ // console.log(category)
   return (
   <div>
     <div>
@@ -34,6 +34,7 @@ const JobsPage = () => {
         <option value="9">9</option>
         <option value="10">10</option>{" "}
       </select>
+    
     </div>
     <JobCardList/>  
     </div>

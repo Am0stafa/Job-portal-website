@@ -54,8 +54,7 @@ export default function IndexNavbar() {
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/pro" tag={Link} id="navbar-brand">
-            <span>"user name"• </span>
-            "user type ,emp,student..."
+            <span>Profile</span>
           </NavbarBrand>
           
           <button

@@ -12,7 +12,7 @@ import {
     
   
   } from "reactstrap";
-const JobBox = () => {
+const JobBox = ({jobs}) => {
     const [iconTabs, setIconsTabs] = React.useState(1);
     return (
  
@@ -20,44 +20,48 @@ const JobBox = () => {
         <div className="mb-3">
     </div> 
     
-        <Card>
+        <Card >
           <CardHeader>
-         <div>job 1</div>
+         <div>{jobs.title}</div>
           </CardHeader>
           <CardBody>
             <TabContent className="tab-space" activeTab={"link" + iconTabs}>
               <TabPane tabId="link1">
                 <p>
-                  Collaboratively administrate empowered markets via
-                  plug-and-play networks. Dynamically procrastinate B2C
-                  users after installed base benefits. <br />
+                Description:  {jobs.JOB_description}
                   <br />
-                  Dramatically visualize customer directed convergence
-                  without revolutionary ROI.
+                Department:  {jobs.department}
+                <br />
+                Start date:  {jobs.JOB_start_date}
+                  <br />
+                End date:  {jobs.end_date}
+                <br />
+                Application deadline:  {jobs.application_deadline}
+                <br />
+                Number of available internships:  {jobs.num_of_available_internships}
+                  <br />
+                Salary range:  {jobs.salary_range}
+                  <br />
+                Application deadline:  {jobs.application_deadline}
+                <br />
+                Qualifications:  {jobs.qualifications}
+                  <br />
+                Location:  {jobs.JOB_location}
+                <br />
+                Job type:  {jobs.job_type}
+                <br />
+                Semester:  {jobs.semester}
+                <br />
+                Faculty_name:  {jobs.faculty_name}
+                <br />
+                
+
                 </p>
               </TabPane>
-              <TabPane tabId="link2">
-                <p>
-                  Completely synergize resource taxing relationships via
-                  premier niche markets. Professionally cultivate one-to-one
-                  customer service with robust ideas. <br />
-                  <br />
-                  Dynamically innovate resource-leveling customer service
-                  for state of the art customer service.
-                </p>
-              </TabPane>
-              <TabPane tabId="link3">
-                <p>
-                  Efficiently unleash cross-media information without
-                  cross-media value. Quickly maximize timely deliverables
-                  for real-time schemas. <br />
-                  <br />
-                  Dramatically maintain clicks-and-mortar solutions without
-                  functional solutions.
-                </p>
-              </TabPane>
+
+             
             </TabContent>
-            <Button color="info" disabled={true}>Info</Button>
+            <Button color="info" disabled={true}>Apply!</Button>
           </CardBody>
 
         </Card>
