@@ -1,5 +1,5 @@
 # dbMileston3
- **Project Overview
+ **Project Overview** <br>
 The internships portal is one initiative being launched by the GIU career office. The aim is to provide a
 unique gateway for motivated high-performing GIU students, to access exclusive, high-quality internship
 opportunities being offered by local and international employers. Students will get the opportunity to
