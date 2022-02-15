@@ -31,6 +31,7 @@ student and sent to their GIU email. The student may upload his/her CV and cover
 CV builder to create a professional cohesive resume. A student can apply to different internships. After
 applying for an internship, the student can keep track for his/her application status (pending, shortlisted,
 rejected or hired).<br>
+<br>
 
 <p align="center">
     Employer
@@ -45,7 +46,7 @@ the employer and sent to the contact person’s email. The profile will be then 
 employer is only allowed to post job offers when their profile is reviewed and accepted from a GIU career
 office admin. After posting a job, the employer is able to view all applicants and update their application
 status.<br>
-
+<br>
 
 <p align="center">
     Admin
@@ -56,7 +57,7 @@ job offer is posted on the system, it must first pass by a career office admin. 
 plausibility of the job, make the job offer post visible to students if accepted, invisible if rejected. The
 admin may mention the reason for rejecting this job offer. The system should keep track of the admins
 who reviewed the employer profiles or job offers.<br>
-
+<br>
 
 <p align="center">
     Faculty Representative
@@ -65,6 +66,7 @@ From every faculty at the GIU, a representative will be selected. A faculty repr
 name, email and faculty. Approved industrial internships job offers by an admin are not posted till they
 are further reviewed by a faculty representative. He/she checks if those industrial internships are relevant
 to the faculty or not.<br>
+<br>
 
 <p align="center">
     Career Office Coordinator
@@ -73,6 +75,7 @@ A career office coordinator can view all the applicants applying for every indus
 he/she filters the applicants and send a list of the potential candidates to the employer to proceed
 with the selection process. A career office coordinator assigns an academic advisor to every industrial
 internship.<br>
+<br>
 
 <p align="center">
     Academic Advisor
@@ -81,6 +84,7 @@ After a student is accepted in an industrial internship, he/she will be monitore
 to ensure that students are having the utmost experience out of those internships. The academic advisor
 views and evaluates the progress reports of his/her students. Every academic advisor has an ID, name,
 email and faculty.<br>
+<br>
 
 <p align="center">
     Job
@@ -90,7 +94,7 @@ allowed faculty(s), salary range (mention if it’s unpaid), qualifications, req
 a provided email. A job can be full time, part time, project based, freelance, summer internship or industrial internship. An industrial internship will not be posted unless it’s reviewed and accepted by the
 Industrial Internships Committee (a career office admin and a faculty representative). In case of a part
 time job, work day(s) should be provided. <br>
-
+<br>
 
 
 <p align="center">
@@ -101,13 +105,14 @@ of the student’s information provided during the registration process (name, G
 faculty, major). Additional information will be required from the student such as: personal mail, education, extracurricular activities, skills (technical, language), achievements honors, LinkedIn Profile Link,
 Behance/Github Links. The system should ensure that whenever the student updates any information
 used in the CV builder, the resume will be updated.<br>
-
+<br>
 
 <p align="center">
     Progress Report
 </p>
 The student should fill progress reports during the industrial internship. A progress report shows the
 student’s progress state (numeric). Also, it has a description, date, and evaluation.<br>
+<br>
 
 <p align="center">
     Contact Person
@@ -117,7 +122,7 @@ A contact person is an employee who is in charge of coordinating the whole proce
 office on behalf of his/her esteemed organization. A contact person has a name, job title, email, mobile
 number(s) and fax <br>
 
-
+<br>
 
 
 
