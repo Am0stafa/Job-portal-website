@@ -18,6 +18,7 @@ Different types of users can use the GIU Internship Portal system. Users are eit
 Admin, Faculty Representative, Career office Coordinator and Academic Advisor. Any user can view, and
 search any information related to the internships posted on the system. A user has a username, password,
 ID and email.<br>
+<br>
 
 
 <p align="center">
