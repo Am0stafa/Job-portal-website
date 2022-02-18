@@ -6,7 +6,7 @@ opportunities being offered by local and international employers. Students will 
 register, search and apply for internships based on their majors. Also, employers will be able to register
 and post job ads to find the suitable applicants.
 The internships will offer excellent opportunities for our students to learn new skills, gain experience with
-the most prestigious employers, and build valuable business relationships. <br>
+the most prestigious employers, and build valuable business relationships.<br>
 
 ## **Systems Requirements**
 This section describes the different requirements that the platform has to include.<br>
