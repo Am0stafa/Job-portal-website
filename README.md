@@ -1,4 +1,8 @@
 # Job portal website
+
+![MasterHead](https://firebasestorage.googleapis.com/v0/b/project-manger-56f5b.appspot.com/o/thumbnail%2Feerd_page-0001.jpeg?alt=media&token=b9827dcb-61dc-45ac-812b-aa8bbf4afbca)
+
+
 ## **Project Overview** <br>
 The internships portal is one initiative being launched by the GIU career office. The aim is to provide a
 unique gateway for motivated high-performing GIU students, to access exclusive, high-quality internship
